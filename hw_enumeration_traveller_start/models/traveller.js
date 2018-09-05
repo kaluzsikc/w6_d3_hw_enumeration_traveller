@@ -11,11 +11,11 @@ Traveller.prototype.getJourneyEndLocations = function () {
 };
 
 Traveller.prototype.getModesOfTransport = function () {
-
+  return this.journeys.map(journey =>journey.transport);
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
-
+  return this.journeys.filter(journey => journey.transport === transport)
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
